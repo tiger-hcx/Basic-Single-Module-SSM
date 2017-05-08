@@ -23,7 +23,7 @@ public class SysUserController {
 	private SysUserService sysUserService;
 	
 	@RequestMapping("/showUserToJspById/{userId}")
-	public String showUser(Model model,@PathVariable("userId") Long userId){
+	public String showUser(Model model,@PathVariable("userId")Long userId){
 		SysUser user = this.sysUserService.getById(userId);
 		model.addAttribute("user", user);
 		return "showUser";
